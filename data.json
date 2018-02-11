@@ -1,0 +1,66 @@
+{
+  "events": [
+    {
+      "type": "article",
+      "date": "2018-02-11T17:48:56.907Z",
+      "id": 2,
+      "title": "Test",
+      "content": "test news",
+      "isRead": true
+    },
+    {
+      "type": "transaction",
+      "date": "2018-02-11T17:50:50.651Z",
+      "amount": 1000,
+      "currency": "USD",
+      "counteragent": "Sberbank",
+      "description": "Test transaction",
+      "isIncome": true,
+      "id": 3
+    },
+    {
+      "type": "article",
+      "date": "2018-02-11T18:26:58.235Z",
+      "id": 4,
+      "title": "Test",
+      "content": "test news",
+      "isRead": true
+    },
+    {
+      "type": "transaction",
+      "date": null,
+      "amount": 500,
+      "currency": "USD",
+      "counteragent": "Bank",
+      "description": "Test",
+      "isIncome": false,
+      "id": 5
+    },
+    {
+      "type": "transaction",
+      "date": null,
+      "amount": 500,
+      "currency": "RUB",
+      "counteragent": "Bank",
+      "description": "test",
+      "isIncome": true,
+      "id": 6
+    },
+    {
+      "type": "article",
+      "date": null,
+      "title": "Test",
+      "content": "test",
+      "isRead": false,
+      "id": 7
+    },
+    {
+      "type": "article",
+      "date": null,
+      "title": "Test Article",
+      "content": "Article Content",
+      "isRead": false,
+      "id": 8
+    }
+  ]
+}

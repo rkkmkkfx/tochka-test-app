@@ -1,0 +1,8 @@
+app-list {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+  max-width: 320px;
+  padding: 20px;
+}
