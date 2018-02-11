@@ -1,8 +1,8 @@
 app-list {
+  box-sizing: border-box;
   position: relative;
   display: flex;
   flex-flow: column;
-  min-height: 100vh;
-  max-width: 320px;
   padding: 20px;
+  margin: 0;
 }
