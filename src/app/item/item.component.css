@@ -1,0 +1,26 @@
+.item {
+  line-height: 20px;
+  min-width: 278px;
+  padding: 15px 20px;
+  border: 1px solid cornflowerblue;
+  cursor: pointer;
+  transition: all .3s ease-in;
+}
+
+.item.active {
+  background-color: #0a4bbf;
+  border-color: #0a4bbf;
+  color: #fff;
+  transition: all .3s ease-in;
+}
+
+.item + .content {
+  border: 1px solid cornflowerblue;
+  border-top: none;
+  padding: 15px 20px;
+}
+
+.item.isRead {
+  background: cornflowerblue;
+  color: #fff;
+}

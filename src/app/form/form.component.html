@@ -1,0 +1,37 @@
+<div class="form-container">
+  <div class="formType">
+    <button ngClass="{{(isTransaction) ? 'active' : ''}}" (click)="setNewEventType('Transaction')">Transaction</button>
+    <button ngClass="{{(!isTransaction) ? 'active' : ''}}" (click)="setNewEventType('Article')">Article</button>
+  </div>
+  <form #f="ngForm" (ngSubmit)="formSubmit(f)">
+    <ng-content *ngIf="isTransaction; then Transaction else Article"></ng-content>
+    <ng-template #Transaction>
+      <div class="formGroup">
+        <label for="isIncome">{{(f.value.isIncome) ? '&#43;' : '&#8722;'}}</label>
+        <input [ngModel]="newEvent.isIncome" id="isIncome" name="isIncome" type="checkbox" hidden >
+        <input ngModel id="amount" name="amount" type="number" value="0" placeholder="Amount" min="0" required>
+        <select name="currency" id="currency" [ngModel]="newEvent.currency" required>
+          <option [ngValue]="'RUB'">RUB</option>
+          <option [ngValue]="'EUR'">EUR</option>
+          <option [ngValue]="'USD'">USD</option>
+        </select>
+      </div>
+      <div class="formGroup">
+        <label for="counteragent">{{(f.value.isIncome) ? 'from' : 'to'}}</label>
+        <input ngModel id="counteragent" name="counteragent" type="text" value="0" placeholder="Counteragent">
+      </div>
+      <div class="formGroup">
+        <textarea ngModel id="description" name="description" placeholder="Description"></textarea>
+      </div>
+    </ng-template>
+    <ng-template #Article>
+      <div class="formGroup">
+        <input ngModel id="title" name="title" type="text" placeholder="Title" required>
+      </div>
+      <div class="formGroup">
+        <textarea ngModel id="content" name="content" placeholder="Content" required></textarea>
+      </div>
+    </ng-template>
+    <button [disabled]="">Add</button>
+  </form>
+</div>

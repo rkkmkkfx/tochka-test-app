@@ -15,4 +15,13 @@ button {
   background: white;
   padding: 10px;
   cursor: pointer;
+  transition: all .3s ease-in;
+}
+
+button:active,
+button.active {
+  border-color: #0a4bbf;
+  background: #0a4bbf;
+  color: #fff;
+  transition: all .3s ease-in;
 }

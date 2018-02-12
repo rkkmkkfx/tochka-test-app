@@ -1,0 +1,36 @@
+.form-container {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.formType {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+label,
+input,
+select {
+  font-size: 1.2em;
+}
+
+input,
+select {
+  border: none;
+  border-bottom: 1px solid cornflowerblue;
+  margin-bottom: 20px;
+  line-height: 1em;
+  max-width: 70%;
+}
+
+label[for="isIncome"] {
+  cursor: pointer;
+}
+
+textarea {
+  border-color: cornflowerblue;
+  width: 100%;
+  height: 5em;
+  padding: 10px;
+  box-sizing: border-box;
+}

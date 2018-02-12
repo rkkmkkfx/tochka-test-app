@@ -1,0 +1,16 @@
+<div class="items">
+  <div class="sort">
+    <button (click)="sortBy($event, 'type')">sort by type</button>
+    <button class="active" (click)="sortBy($event, 'date')">sort by date</button>
+  </div>
+  <app-item
+    *ngFor="let item of events"
+    [eventData]="item"
+    [(active)]="activeEventID === item.id"
+    (SetActive)="setActive($event)"
+    (EventDelete)="onEventDelete($event)"
+    (ReadEvent)="onReadEvent($event)"
+  ></app-item>
+  <button [ngClass]="(showForm) ? 'active' : ''" (click)="toggleForm()">Add new event</button>
+</div>
+<app-form class="form" *ngIf="showForm" (createEvent)="addEvent($event)"></app-form>

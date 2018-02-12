@@ -27,32 +27,12 @@
       "isRead": true
     },
     {
-      "type": "transaction",
-      "date": null,
-      "amount": 500,
-      "currency": "USD",
-      "counteragent": "Bank",
-      "description": "Test",
-      "isIncome": false,
-      "id": 5
-    },
-    {
-      "type": "transaction",
-      "date": null,
-      "amount": 500,
-      "currency": "RUB",
-      "counteragent": "Bank",
-      "description": "test",
-      "isIncome": true,
-      "id": 6
-    },
-    {
       "type": "article",
-      "date": null,
+      "date": "1970-01-01T00:00:00.000Z",
+      "id": 7,
       "title": "Test",
       "content": "test",
-      "isRead": false,
-      "id": 7
+      "isRead": true
     },
     {
       "type": "article",
@@ -61,6 +41,24 @@
       "content": "Article Content",
       "isRead": false,
       "id": 8
+    },
+    {
+      "type": "transaction",
+      "date": null,
+      "amount": 400,
+      "currency": "EUR",
+      "counteragent": "Test",
+      "description": "Test",
+      "isIncome": false,
+      "id": 9
+    },
+    {
+      "type": "article",
+      "date": null,
+      "title": "Test",
+      "content": "Test",
+      "isRead": false,
+      "id": 10
     }
   ]
 }

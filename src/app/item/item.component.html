@@ -1,0 +1,18 @@
+<div [ngSwitch]="eventData.type">
+  <ng-container *ngSwitchCase="'transaction'">
+    <div [ngClass]="['item', (active) ? 'active' : '']"  (click)="setActive($event, eventData.id)">
+      {{(eventData.isIncome) ? '+' : '-'}}{{eventData.amount}} {{eventData.currency}} {{(eventData.isIncome) ? 'from' : 'to'}} {{eventData.counteragent}}
+    </div>
+    <div *ngIf="active" class="content">
+      <p>{{eventData.description}}</p>
+      <button (click)="deleteEvent(eventData.id)">Delete</button>
+    </div>
+  </ng-container>
+  <ng-container *ngSwitchCase="'article'">
+    <div [ngClass]="['item', (eventData.isRead) ? 'isRead' : '', (active) ? 'active' : '']" (click)="setActive($event, eventData.id)">{{eventData.title}}</div>
+    <div *ngIf="active" class="content">
+      <p>{{eventData.content}}</p>
+      <button *ngIf="!eventData.isRead" (click)="readEvent(eventData)">Mark as Read</button>
+    </div>
+  </ng-container>
+</div>

@@ -1,0 +1,6 @@
+.items {
+  margin: 0 auto 20px;
+}
+.items .sort {
+  display: flex;
+}
